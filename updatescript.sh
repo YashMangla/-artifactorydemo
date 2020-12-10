@@ -1,9 +1,9 @@
-rm -rf test.txt
-git rm test.txt
-echo "this is dummy1" >> test2.txt
-git add .
-git commit -m "sample test1"
-git push -origin main
+#rm -rf test.txt
+#git rm test.txt
+#echo "this is dummy1" >> test2.txt
+#git add .
+#git commit -m "sample test1"
+#git push -origin main
 git pull
 hash=$(git log --pretty=format:'%h' -n 1)
 echo $hash
