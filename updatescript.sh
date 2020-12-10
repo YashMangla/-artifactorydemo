@@ -1,7 +1,7 @@
-rm -rf test2.txt
-#echo "this is a test2 file" >> test2.txt
+#rm -rf test2.txt
+echo "this is a test2 file" >> test.txt
 git add .
-git commit -m "updated test file"
+git commit -m "create test file"
 git push -origin main
 git status
 git pull
