@@ -1,4 +1,5 @@
 rm -rf test.txt
+git rm test.txt
 echo "this is dummy1" >> test2.txt
 git add .
 git commit -m "sample test1"
