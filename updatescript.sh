@@ -2,7 +2,7 @@ rm -rf test1.txt
 echo "this is a test2 file" >> test2.txt
 git add .
 git commit -m "updated test1 file"
-git push - origin main
+git push -origin main
 git status
 git pull
 hash=$(git log --pretty=format:'%h' -n 1)
