@@ -18,5 +18,6 @@ do
 	#echo $i 
 	current_path=$(pwd)"/"$i
 	#echo $current_path
+	echo $current_path
 	curl -u admin:admin -T $current_path "http://localhost/artifactory/artidemo/$i"
 done
