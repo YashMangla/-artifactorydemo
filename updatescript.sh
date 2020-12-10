@@ -10,7 +10,7 @@ echo $hash
 folderstr=$(git diff-tree --no-commit-id --name-only -r $hash) # > /Users/diptripa/git-updated-files/difference.txt
 #cat /Users/diptripa/git-updated-files/difference.txt
 echo $folderstr
-git status
+#git status
 
 for i in $folderstr
 do 
