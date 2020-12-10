@@ -1,9 +1,4 @@
 #rm -rf test2.txt
-echo "this is a test2 file" >> test.txt
-git add .
-git commit -m "create test file"
-git push -origin main
-git status
 git pull
 hash=$(git log --pretty=format:'%h' -n 1)
 echo $hash
