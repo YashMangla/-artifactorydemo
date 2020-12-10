@@ -1,2 +1,2 @@
-# -artifactorydemo
+# artifactorydemo
 sample repo for artifactory
