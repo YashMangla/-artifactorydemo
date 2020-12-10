@@ -1,4 +1,8 @@
-#rm -rf test2.txt
+rm -rf test2.txt
+echo "this is dummy" >> test2.txt
+git add .
+git commit -m "sample test"
+git push -origin main
 git pull
 hash=$(git log --pretty=format:'%h' -n 1)
 echo $hash
@@ -13,5 +17,5 @@ do
 	#echo $i 
 	current_path=$(pwd)"/"$i
 	#echo $current_path
-	#curl -u admin:admin -T $current_path "http://localhost/artifactory/artidemo/$i"
+	curl -u admin:admin -T $current_path "http://localhost/artifactory/artidemo/$i"
 done
