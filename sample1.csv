@@ -1,2 +1,3 @@
 site,dc,hostType,hostOs,tool
+BGL,BGL11,VM-8,$hostOs,acme
 BGL,BGL11,ADS-3,RHEL7.6,adsrsvp

@@ -24,7 +24,7 @@ run_file_task()
 	_file="$1"
 	#tmp1= cat "$_file" | sed -n "14,14p"
 	tmp1=$(cat "$_file" |grep "site" | sed "s/  //g" | sed "s/(//g" | sed "s/site=//g" | sed "s/ dc=/,/g" | sed "s/ hostType=/,/g" | sed "s/ hostOs=/,/g" | sed "s/ tool=/,/g" | sed "s/ \/t.*//g")
-	echo "site,dc,hostType,hostOs,tool" > sample1.csv
+	#echo "site,dc,hostType,hostOs,tool" > sample1.csv
 	echo "$tmp1" >> sample1.csv
 }
 
@@ -36,7 +36,7 @@ checkout_new_data(){
 	#cat /Users/diptripa/git-updated-files/difference.txt
 	echo $folderstr
 	#git status
-
+	echo "site,dc,hostType,hostOs,tool" > sample1.csv
 	for i in $folderstr
 	do 
 		# get all the list of changed files
