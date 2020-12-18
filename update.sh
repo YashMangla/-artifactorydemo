@@ -43,8 +43,17 @@ checkout_new_data(){
 		#echo $i 
 		current_path=$(pwd)"/"$i
 		#echo $current_path
-		echo $current_path
-		curl -u admin:admin -T $current_path "http://localhost/artifactory/artidemo/$i"
+		if [ -s "$current_path"]
+		then 
+			echo $current_path
+			tmp1= $( $current_path | sed 's|\(.*\)/.*|\1|' )
+			echo $tmp1
+			curl -u admin:admin -T $current_path "http://localhost/artifactory/artidemo/$i"
+			tmp2= "$tmp1/run.sh"
+			echo $tmp2
+			check_empty_files $tmp2
+		fi
+
 	done
 }
 
